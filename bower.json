@@ -1,7 +1,7 @@
 {
   "name": "Tweetie",
   "main": "Tweetie.js",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "homepage": "https://github.com/cam5/Tweetie",
   "description": "Simple Twitter Feed Plugin that works with new Twitter 1.1 API.",
   "keywords": [
