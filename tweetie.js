@@ -97,8 +97,6 @@
         // Fetch tweets
         $.getJSON(settings.apiPath, { username: settings.username, list: settings.list, hashtag: settings.hashtag, count: settings.count, exclude_replies: settings.hideReplies }, function (twt) {
             that.find('span').fadeOut('fast', function () {
-                that.html('<ul></ul>');
-
                 for (var i = 0; i < settings.count; i++) {
                     var tweet = false;
                     if(twt[i]) {
@@ -119,7 +117,7 @@
                         screen_name: linking('@'+ tweet.user.screen_name)
                     };
 
-                    that.find('ul').append('<li>' + templating(temp_data) + '</li>');
+                    that.append(templating(temp_data));
                 }
 
                 if (typeof callback === 'function') { callback(); }
